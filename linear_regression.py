@@ -89,25 +89,25 @@ new_val = tensor([[5.0]])
 model = Model()
 optimizer_Adam = torch.optim.Adam(model.parameters(), lr=learning_rate)
 model = training(model, x_data, y_data, epoch_num, criterion, optimizer_Adam)
-print(f'Predict with new value : {new_val}, {model(new_val).item()}')
+print(f'Adam Predict with new value : {new_val}, {model(new_val).item()}')
 
 # Adagrad
 model = Model()
 optimizer_Adagrad = torch.optim.Adagrad(model.parameters(), lr=learning_rate)
 model = training(model, x_data, y_data, epoch_num, criterion, optimizer_Adagrad)
-print(f'Predict with new value : {new_val}, {model(new_val).item()}')
+print(f'Adagrad Predict with new value : {new_val}, {model(new_val).item()}')
 
 # RMSprop
 model = Model()
 optimizer_RMSprop = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
 model = training(model, x_data, y_data, epoch_num, criterion, optimizer_RMSprop)
-print(f'Predict with new value : {new_val}, {model(new_val).item()}')
+print(f'RMSprop Predict with new value : {new_val}, {model(new_val).item()}')
 
 #Rprop
 model = Model()
 optimizer_Rprop = torch.optim.Rprop(model.parameters(), lr=learning_rate)
 model = training(model, x_data, y_data, epoch_num, criterion, optimizer_Rprop)
-print(f'Predict with new value : {new_val}, {model(new_val).item()}')
+print(f'Rporp Predict with new value : {new_val}, {model(new_val).item()}')
 
 
 
